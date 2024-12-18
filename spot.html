@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="eeeec44ce1ca7ad2e753b99813495fff.png" alt="Tangub city logo">
+            Tangub City
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <a href="About.html"class="btn">About</a>
+                <li><a href="spot.html">Top Spots</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon">☰</div>
+    </header>
+
+    
+    <section id="spots">
+        <h1>Tangub City's 3 Famous Tourist Spots</h1>
+        <div class="spots-container">
+            <div class="spot" onclick="openModal('Belvedere', 'The Belvedere is a structure that commands the scenic view of the city. It is architecturally designed Modern Contemporary structure that covers an approximate land area of 523.0 square meters with an elevation of 980m above sea level. It is a component of the Gardens of the World Development Project specifically located in Brgy. Fertig Hills, Tangub City.')">
+                <img src="spot3.jpg" alt="Belvedere">
+                <h3>Hoyohoy View Deck</h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Highland Stone chapel', 'Hoyohoy Highland Stone Chapel Hotel and Adventure Park is owned and operated by Highland Stone Chapel Corp. Our flagship extreme recreation is the Sky-Line Zip which is considered the Highest and Longest in Asia. Two lines: First Line: 1.250 Kms and Second Line: 1.100 Kms Total of 2.350 Kms started last July 16, 2010 then two years after we operated our Hotel. We are located at the foot of Mt. Malindang Mountain Ranges which is around 3,000 feet above sea-level over looking Lanao del Norte, Tangub City, and Ozamiz City and most importantly the majestic view of sunrise and Panguil Bay. Our Aspiration is to be the Top Tourist and Seminar Destination in whole Mindanao.')">
+                <img src="stone chapel.jpg" alt="Maria Cristina Falls">
+                <h3>Highland Stone chapel</h3>
+                <p>Click picture to view description</p>
+            </div>
+            <div class="spot" onclick="openModal('Panguil bay bridge', 'The Panguil Bay Bridge is a 3.77 km extradosed bridge that crosses Panguil Bay. It connects Tangub in Misamis Occidental and Tubod in Lanao del Norte. It is currently the longest water-spanning bridge in Mindanao. It also reduces the travel time between Tangub and Tubod from 2.5 hours to just a few minutes.')">
+                <img src="panguilbay.jpeg" alt="Cathedral Falls">
+                <h3>Panguil bay bridge</h3>
+                <p>Click picture to view description</p>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openModal(title, description) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.body.style.overflow = 'hidden'; // Disable page scroll
+        }
+    
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+            document.body.style.overflow = ''; // Re-enable page scroll
+        }
+    </script>
+
+    <footer>
+        <p>Thank you for visiting on our website, Click Continue to see more details about Tangub City.</p>
+        <a href="https://en.wikipedia.org/wiki/Tangub" class="btn">Continue</a>
+    </footer>

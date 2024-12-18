@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #1b9f87;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(115, 59, 59, 0.1);
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e00;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: rgb(11, 0, 0);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between text and image */
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.menu-icon {
+    display: none; /* For future mobile responsiveness */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Picture Section */
+#picture {
+    background: url('background.webp') no-repeat center center/cover;
+    height: 85vh;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#picture .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+#picture h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#picture p {
+    font-size: 1.2rem;
+}
+
+/* About Section */
+#about {
+    padding: 4rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+    text-align: center;
+    background-image: url('tangub city.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Center the image */
+    margin-top: 2rem; /* Adds space above the spots section */
+    color: white; /* Ensures the text is readable */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Tourist Spots */
+#spots {
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-top: 0rem; /* Adds gap between About Page and Spot */
+}
+
+.spots-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.spot {
+    text-align: center;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.spot img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.spot img:hover {
+    transform: scale(1.05);
+}
+
+.spot h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.spot p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Disable scrolling */
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 1rem;
+    width: 30%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #040404;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #e00;
+    color: #fcfbfb;
+    text-decoration: none; /* Removes the underline */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+footer .link:hover {
+    background-color: #b00; /* Darker color on hover */
+}
